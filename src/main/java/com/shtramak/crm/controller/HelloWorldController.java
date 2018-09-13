@@ -1,4 +1,4 @@
-package com.shtramak.crm.servlet;
+package com.shtramak.crm.controller;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
