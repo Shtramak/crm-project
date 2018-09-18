@@ -6,4 +6,6 @@ import com.shtramak.crm.entity.Customer;
 
 public interface CustomerDao {
     List<Customer> getCustomers();
+
+    void saveCustomer(Customer customer);
 }
