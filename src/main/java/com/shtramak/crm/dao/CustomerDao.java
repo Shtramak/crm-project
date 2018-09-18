@@ -10,4 +10,6 @@ public interface CustomerDao {
     void saveCustomer(Customer customer);
 
     Customer getCustomerById(Long customerId);
+
+    void deleteCustomerById(Long customerId);
 }
