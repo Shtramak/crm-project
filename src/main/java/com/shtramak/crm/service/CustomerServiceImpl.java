@@ -34,4 +34,10 @@ public class CustomerServiceImpl implements CustomerService {
     public Customer getCustomerById(Long customerId) {
         return customerDao.getCustomerById(customerId);
     }
+
+    @Override
+    @Transactional
+    public void deleteCustomerById(Long customerId) {
+        customerDao.deleteCustomerById(customerId);
+    }
 }
