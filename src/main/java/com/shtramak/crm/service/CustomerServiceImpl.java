@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class CustomerServiceImpl implements CustomerService {
     private final CustomerDao customerDao;
 
@@ -18,25 +19,23 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    @Transactional
+    @Transactional(readOnly = true)
     public List<Customer> getCustomers() {
         return customerDao.getCustomers();
     }
 
     @Override
-    @Transactional
     public void saveCustomer(Customer customer) {
         customerDao.saveCustomer(customer);
     }
 
     @Override
-    @Transactional
+    @Transactional(readOnly = true)
     public Customer getCustomerById(Long customerId) {
         return customerDao.getCustomerById(customerId);
     }
 
     @Override
-    @Transactional
     public void deleteCustomerById(Long customerId) {
         customerDao.deleteCustomerById(customerId);
     }
